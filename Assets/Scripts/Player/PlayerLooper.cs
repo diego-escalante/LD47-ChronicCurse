@@ -18,6 +18,7 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     private SpriteRenderer spriteRenderer;
     private Slider breakMeter;
     private LoopController loop;
+    private CameraBehavior cam;
 
     private void OnEnable() {
         this.SubscribeToLoop();
@@ -32,6 +33,7 @@ public class PlayerLooper : MonoBehaviour, ILooper {
         spriteRenderer = GetComponent<SpriteRenderer>();
         loop = GameObject.FindGameObjectWithTag("GameController").GetComponent<LoopController>();
         breakMeter = GameObject.FindGameObjectWithTag("UI").transform.Find("BreakMeter").GetComponent<Slider>();
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraBehavior>();
     }
 
     public void Update() {
@@ -52,6 +54,9 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     }
 
     public void Loop() {
+        Vector3 delta = (Vector3)position - transform.position;
+        cam.Translate(delta);
+
         transform.position = position;
         if (breakCharges < maxBreakCharges) {
             loopsToChargeBreakLeft--;
