@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof (SpriteRenderer))]
 public class PlayerLooper : MonoBehaviour, ILooper {
     
     public int maxBreakCharges = 1;
@@ -12,6 +13,9 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     private Vector2 position;
     private int breakCharges = 0;
 
+    private SpriteRenderer loopGhost;
+    private SpriteRenderer spriteRenderer;
+
     private void OnEnable() {
         this.SubscribeToLoop();
         loopsToChargeBreakLeft = loopsToChargeBreak;
@@ -21,7 +25,11 @@ public class PlayerLooper : MonoBehaviour, ILooper {
         this.UnsubscribeFromLoop();
     }
 
-    private void Update() {
+    public void Awake() {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    public void Update() {
         if (Input.GetButton("Action") && breakCharges > 0) {
             BreakLoop();
         }
@@ -33,6 +41,7 @@ public class PlayerLooper : MonoBehaviour, ILooper {
 
     public void SetState() {
         position = transform.position;
+        createLoopGhost();
         isLooping = true;
     }
 
@@ -52,4 +61,17 @@ public class PlayerLooper : MonoBehaviour, ILooper {
         isLooping = false;
     }
 
+    private void createLoopGhost() {
+        // Create ghost if it doesn't exist.
+        if (loopGhost == null) {
+            GameObject ghostGO = new GameObject(gameObject.name + " Loop Ghost");
+            loopGhost = ghostGO.AddComponent<SpriteRenderer>();
+            Color c = loopGhost.color;
+            c.a = 0.5f;
+            loopGhost.color = c;
+        }
+
+        loopGhost.sprite = spriteRenderer.sprite;
+        loopGhost.transform.position = transform.position;
+    }
 }
