@@ -74,8 +74,8 @@ Core Game:
 * ~~Standard 2D Platforming.~~
 * ~~Looping player.~~
 * ~~Loop breaking power and regeneration.~~
-* UI: Show loop time, loop breaking power charge, controls.
-* Basic levels - starting points, goals, transition between levels.
+* ~~UI: Show loop time, loop breaking power charge, controls.~~
+* ~~Basic levels - starting points, goals, transition between levels.~~
 * Tutorial level (Player enters temple, no looping, just get used to standard platforming. _Maybe_ short dialogue to explain story.)
 
 Extra Mechanics:
