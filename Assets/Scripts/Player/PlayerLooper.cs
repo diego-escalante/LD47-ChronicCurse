@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent (typeof (SpriteRenderer))]
 public class PlayerLooper : MonoBehaviour, ILooper {
@@ -15,6 +16,8 @@ public class PlayerLooper : MonoBehaviour, ILooper {
 
     private SpriteRenderer loopGhost;
     private SpriteRenderer spriteRenderer;
+    private Slider breakMeter;
+    private LoopController loop;
 
     private void OnEnable() {
         this.SubscribeToLoop();
@@ -27,12 +30,15 @@ public class PlayerLooper : MonoBehaviour, ILooper {
 
     public void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        loop = GameObject.FindGameObjectWithTag("GameController").GetComponent<LoopController>();
+        breakMeter = GameObject.FindGameObjectWithTag("UI").transform.Find("BreakMeter").GetComponent<Slider>();
     }
 
     public void Update() {
         if (Input.GetButton("Action") && breakCharges > 0) {
             BreakLoop();
         }
+        UpdateBreakMeter();
     }
 
     public bool IsLooping() {
@@ -51,13 +57,13 @@ public class PlayerLooper : MonoBehaviour, ILooper {
             loopsToChargeBreakLeft--;
             if (loopsToChargeBreakLeft <= 0) {
                 breakCharges++;
-                loopsToChargeBreakLeft = loopsToChargeBreak;
             }
         }
     }
 
     private void BreakLoop() {
         breakCharges--;
+        loopsToChargeBreakLeft = loopsToChargeBreak;
         isLooping = false;
     }
 
@@ -73,5 +79,9 @@ public class PlayerLooper : MonoBehaviour, ILooper {
 
         loopGhost.sprite = spriteRenderer.sprite;
         loopGhost.transform.position = transform.position;
+    }
+
+    private void UpdateBreakMeter() {
+        breakMeter.value = (loopsToChargeBreak-loopsToChargeBreakLeft)/(float)loopsToChargeBreak + (isLooping ? loop.GetLoopPercentage() / loopsToChargeBreak : 0);
     }
 }
