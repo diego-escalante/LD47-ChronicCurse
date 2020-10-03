@@ -1,0 +1,13 @@
+﻿using UnityEngine;
+
+public static class Extensions{
+    // Contains checks if a layer is included in a LayerMask.
+    public static bool Contains(this LayerMask mask, int layer) {
+        return mask == (mask | (1 << layer));
+    }
+
+    // Overlaps checks if this LayerMask contains at least another layer on the other LayerMask.
+    public static bool Overlaps(this LayerMask mask, LayerMask other) {
+        return 0 != (mask & other);
+    }
+}
