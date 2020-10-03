@@ -72,7 +72,7 @@ That's it. No way I'm even getting through all that.
 ## TODO:
 Core Game:
 * ~~Standard 2D Platforming.~~
-* Looping player.
+* ~~Looping player.~~
 * Loop breaking power and regeneration.
 * UI: Show loop time, loop breaking power charge, controls.
 * Basic levels - starting points, goals, transition between levels.
