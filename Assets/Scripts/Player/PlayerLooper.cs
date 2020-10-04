@@ -25,6 +25,7 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     private Transform shiftButton;
     private MusicController musicController;
     private SoundController soundController;
+    private CamShake camShake;
 
     public Sprite run;
     public Sprite stand;
@@ -63,9 +64,10 @@ public class PlayerLooper : MonoBehaviour, ILooper {
         animator = GetComponent<Animator>();
         loop = GameObject.FindGameObjectWithTag("GameController").GetComponent<LoopController>();
         breakMeter = GameObject.FindGameObjectWithTag("UI").transform.Find("BreakMeter").GetComponent<Slider>();
-        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraBehavior>();
+        cam = GameObject.FindGameObjectWithTag("MainCamera").transform.parent.GetComponent<CameraBehavior>();
         musicController = loop.GetComponent<MusicController>();
         soundController = loop.GetComponent<SoundController>();
+        camShake = cam.transform.Find("Main Camera").GetComponent<CamShake>();
     }
 
     public void Update() {
@@ -85,12 +87,14 @@ public class PlayerLooper : MonoBehaviour, ILooper {
         musicController.MusicMain();
         createLoopGhost();
         soundController.playSetStateSound();
+        camShake.TinyShake();
     }
 
     public void Loop() {
         Vector3 delta = (Vector3)position - transform.position;
         cam.Translate(delta);
         soundController.playSnapBackSound();
+        camShake.TinyShake();
 
         transform.position = position;
         if (breakCharges < maxBreakCharges) {
@@ -105,6 +109,7 @@ public class PlayerLooper : MonoBehaviour, ILooper {
         breakCharges--;
         loopsToChargeBreakLeft = loopsToChargeBreak;
         isLooping = false;
+        camShake.TinyShake();
         musicController.MusicBoops();
         soundController.playBreakSound();
     }

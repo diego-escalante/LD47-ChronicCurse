@@ -18,7 +18,6 @@ public class SoundController : MonoBehaviour {
     }
 
     public void playJumpSound() {
-        Debug.Log("BOOM");
         audioSource.PlayOneShot(jumpSound, 1);
     }
 

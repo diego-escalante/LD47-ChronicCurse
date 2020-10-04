@@ -15,7 +15,7 @@ public class CameraBehavior : MonoBehaviour {
         z = transform.position.z;
         target = GameObject.FindGameObjectWithTag("Player").transform;
         transform.position = new Vector3(target.position.x, target.position.y + 2f, z);
-        cam = GetComponent<Camera>();
+        cam = transform.Find("Main Camera").GetComponent<Camera>();
     }
 
     private void Update() {
