@@ -78,4 +78,8 @@ public class DialogueManager : MonoBehaviour {
             yield return new WaitForSecondsRealtime(0.01f);
         }
     }
+
+    public bool IsOpen() {
+        return isOpen;
+    }
 }

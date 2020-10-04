@@ -82299,6 +82299,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1496612877969596927, guid: be3b018f76ccdf1448b16a24c253bae3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.099975586
+      objectReference: {fileID: 0}
     - target: {fileID: 6073549953864792369, guid: be3b018f76ccdf1448b16a24c253bae3,
         type: 3}
       propertyPath: m_IsActive
@@ -96720,12 +96725,12 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[0].text
-      value: Congratulations!
+      value: Congratulations! You made it out of the ruins!
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -96765,7 +96770,7 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[1].text
-      value: You made it out of the ruins!
+      value: Thanks for playing! :)
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -96795,8 +96800,7 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[2].text
-      value: Well, actually you just exhaused all the levels I could prepare with
-        the limited amount of time.
+      value: Press the Enter key to restart the game.
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -96841,7 +96845,7 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[3].text
-      value: Thanks for playing! :)
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097887, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
