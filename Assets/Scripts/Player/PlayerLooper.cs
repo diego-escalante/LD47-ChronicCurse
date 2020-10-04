@@ -20,6 +20,11 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     private LoopController loop;
     private CameraBehavior cam;
     private Animator animator;
+    private Slider loopSlider;
+    private Slider chargeSlider;
+    private Transform shiftButton;
+    private MusicController musicController;
+    private SoundController soundController;
 
     public Sprite run;
     public Sprite stand;
@@ -27,19 +32,40 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     private void OnEnable() {
         this.SubscribeToLoop();
         loopsToChargeBreakLeft = loopsToChargeBreak;
+        loopSlider.gameObject.SetActive(true);
+        chargeSlider.gameObject.SetActive(true);
+        shiftButton.gameObject.SetActive(true);
     }
 
     private void OnDisable() {
         this.UnsubscribeFromLoop();
+        if (loopSlider != null) {
+            loopSlider.gameObject.SetActive(false);
+        }
+        if (chargeSlider != null) {
+            chargeSlider.gameObject.SetActive(false);
+        }
+        if (shiftButton != null) {
+            shiftButton.gameObject.SetActive(false);
+        }
     }
 
     public void Awake() {
+        Transform UITrans = GameObject.FindGameObjectWithTag("UI").transform;
+        loopSlider = UITrans.Find("LoopSlider").GetComponent<Slider>();
+        chargeSlider = UITrans.Find("BreakMeter").GetComponent<Slider>();
+        shiftButton = UITrans.Find("ButtonShift");
+        loopSlider.gameObject.SetActive(this.isActiveAndEnabled);
+        chargeSlider.gameObject.SetActive(this.isActiveAndEnabled);
+        shiftButton.gameObject.SetActive(this.isActiveAndEnabled);
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-
         loop = GameObject.FindGameObjectWithTag("GameController").GetComponent<LoopController>();
         breakMeter = GameObject.FindGameObjectWithTag("UI").transform.Find("BreakMeter").GetComponent<Slider>();
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraBehavior>();
+        musicController = loop.GetComponent<MusicController>();
+        soundController = loop.GetComponent<SoundController>();
     }
 
     public void Update() {
@@ -56,12 +82,15 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     public void SetState() {
         position = transform.position;
         isLooping = true;
+        musicController.MusicMain();
         createLoopGhost();
+        soundController.playSetStateSound();
     }
 
     public void Loop() {
         Vector3 delta = (Vector3)position - transform.position;
         cam.Translate(delta);
+        soundController.playSnapBackSound();
 
         transform.position = position;
         if (breakCharges < maxBreakCharges) {
@@ -76,6 +105,8 @@ public class PlayerLooper : MonoBehaviour, ILooper {
         breakCharges--;
         loopsToChargeBreakLeft = loopsToChargeBreak;
         isLooping = false;
+        musicController.MusicBoops();
+        soundController.playBreakSound();
     }
 
     private void createLoopGhost() {

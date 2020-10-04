@@ -14,7 +14,7 @@ public class EnableLoopTrigger : MonoBehaviour {
 
     void Update() {
         if (coll.Overlaps(playerColl)) {
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<LoopController>().enabled = true;
+            // GameObject.FindGameObjectWithTag("GameController").GetComponent<LoopController>().enabled = true;
             playerColl.GetComponent<PlayerLooper>().enabled = true;
             this.enabled = false;
         }

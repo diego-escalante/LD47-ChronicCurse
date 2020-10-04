@@ -107,6 +107,8 @@ public class PlayerMovement : MonoBehaviour {
     CollisionController collisionController;
     CollisionController.CollisionInfo collisionInfo;
 
+    private SoundController soundController;
+
     public void OnValidate() {
         jumpHeight = Mathf.Max(0, jumpHeight);
         minJumpHeight = Mathf.Clamp(minJumpHeight, 0, jumpHeight);
@@ -134,6 +136,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	public void Start() {
         collisionController = GetComponent<CollisionController>();
+        soundController = GameObject.FindGameObjectWithTag("GameController").GetComponent<SoundController>();
         UpdateKinematics();
 	}
 	
@@ -216,6 +219,7 @@ public class PlayerMovement : MonoBehaviour {
                 jumpsLeft--;
                 // Just set the jump timer to negative to "consume" input.
                 jumpBufferTimeLeft = -1;
+                soundController.playJumpSound();
             }
         }
         

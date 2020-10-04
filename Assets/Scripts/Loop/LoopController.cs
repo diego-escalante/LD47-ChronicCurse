@@ -5,50 +5,33 @@ using UnityEngine.UI;
 
 public class LoopController : MonoBehaviour {
 
-    public float loopDuration = 5f;
-    private float loopTimeLeft;
+    public float loopDuration = 4f;
+    private float prevLoopTime;
     private Slider loopSlider;
-    private Slider chargeSlider;
-    private Transform shiftButton;
+    private MusicController musicController;
 
     private List<ILooper> subscribers = new List<ILooper>();
 
     private void Awake() {
         Transform UITrans = GameObject.FindGameObjectWithTag("UI").transform;
         loopSlider = UITrans.Find("LoopSlider").GetComponent<Slider>();
-        chargeSlider = UITrans.Find("BreakMeter").GetComponent<Slider>();
-        shiftButton = UITrans.Find("ButtonShift");
-        loopSlider.gameObject.SetActive(this.isActiveAndEnabled);
-        chargeSlider.gameObject.SetActive(this.isActiveAndEnabled);
-        shiftButton.gameObject.SetActive(this.isActiveAndEnabled);
-    }
-
-    private void OnEnable() {
-        loopTimeLeft = loopDuration;
-        loopSlider.gameObject.SetActive(true);
-        chargeSlider.gameObject.SetActive(true);
-        shiftButton.gameObject.SetActive(true);
-    }
-
-    private void OnDisable() {
-        if (loopSlider != null) {
-            loopSlider.gameObject.SetActive(false);
-        }
-        if (chargeSlider != null) {
-            chargeSlider.gameObject.SetActive(false);
-        }
-        if (shiftButton != null) {
-            shiftButton.gameObject.SetActive(false);
-        }
+        musicController = GetComponent<MusicController>();
+        musicController.StartMusic();
+        prevLoopTime = loopDuration;
     }
 
     private void Update() {
-        loopTimeLeft -= Time.deltaTime;
-        loopSlider.value = GetLoopPercentage();
-        if (loopTimeLeft <= 0) {
-            UpdateLoopers();
-            loopTimeLeft = loopDuration;
+        float currentLoopTime = loopDuration - musicController.main.time % loopDuration;
+        if (loopSlider == null) {
+            loopSlider = GameObject.FindGameObjectWithTag("UI").transform.Find("LoopSlider").GetComponent<Slider>();
         }
+        if (loopSlider != null && loopSlider.IsActive()) {
+            loopSlider.value = GetLoopPercentage();
+        }
+        if (currentLoopTime > prevLoopTime) {
+            UpdateLoopers();
+        }
+        prevLoopTime = currentLoopTime;
     }
 
     public void Subscribe(ILooper iLooper) {
@@ -71,6 +54,6 @@ public class LoopController : MonoBehaviour {
     }
 
     public float GetLoopPercentage() {
-        return Mathf.Clamp((loopDuration-loopTimeLeft)/loopDuration, 0, 1);
+        return Mathf.Clamp((loopDuration-prevLoopTime)/loopDuration, 0, 1);
     }
 }
