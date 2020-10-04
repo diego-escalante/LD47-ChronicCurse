@@ -26,6 +26,13 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void StartDialogue(Dialogue dialogue) {
+        if (animator == null || uiText == null) {
+            Transform trans = GameObject.FindWithTag("UI").transform.Find("Dialogue");
+            uiText = trans.Find("Text").GetComponent<Text>();
+            animator = trans.GetComponent<Animator>();
+            animator.SetBool("isOpen", isOpen);
+        }
+
         Time.timeScale = 0f;
         subDialogues.Clear();
         isOpen = true;

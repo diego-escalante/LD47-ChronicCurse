@@ -21759,7 +21759,7 @@ GameObject:
   - component: {fileID: 2065279632}
   - component: {fileID: 2065279631}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LoopTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22399,6 +22399,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e45af5f89372340991d66874aee06f, type: 3}
+--- !u!1001 &7353305425723630428
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3778270442394005995, guid: 265979a25bcd05349b73c7dd3cc79658,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778270442394005995, guid: 265979a25bcd05349b73c7dd3cc79658,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778270442394005995, guid: 265979a25bcd05349b73c7dd3cc79658,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778270442394005995, guid: 265979a25bcd05349b73c7dd3cc79658,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778270442394005995, guid: 265979a25bcd05349b73c7dd3cc79658,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778270442394005995, guid: 265979a25bcd05349b73c7dd3cc79658,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778270442394005995, guid: 265979a25bcd05349b73c7dd3cc79658,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778270442394005995, guid: 265979a25bcd05349b73c7dd3cc79658,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778270442394005995, guid: 265979a25bcd05349b73c7dd3cc79658,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778270442394005995, guid: 265979a25bcd05349b73c7dd3cc79658,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778270442394005995, guid: 265979a25bcd05349b73c7dd3cc79658,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046354645222675367, guid: 265979a25bcd05349b73c7dd3cc79658,
+        type: 3}
+      propertyPath: m_Name
+      value: Wallbackground
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 265979a25bcd05349b73c7dd3cc79658, type: 3}
 --- !u!1001 &8698379624165747569
 PrefabInstance:
   m_ObjectHideFlags: 0
