@@ -99,6 +99,7 @@ public class PlayerLooper : MonoBehaviour, ILooper {
         createLoopGhost();
         soundController.playSetStateSound();
         camShake.TinyShake();
+        plc.Revive();
     }
 
     public void Loop() {
