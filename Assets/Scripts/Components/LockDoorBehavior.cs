@@ -17,7 +17,7 @@ public class LockDoorBehavior : MonoBehaviour {
     private void Update() {
         if (coll.Overlaps(playerColl) && pInv.Haskey()) {
             pInv.UseKey();
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 

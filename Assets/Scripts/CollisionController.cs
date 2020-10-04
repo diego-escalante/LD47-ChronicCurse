@@ -9,7 +9,7 @@ public class CollisionController : MonoBehaviour {
 
     private BoxCollider2D boxCollider;
     private const float SKIN = 0.025f;
-    private const int RAYCAST_COUNT = 5;
+    private const int RAYCAST_COUNT = 10;
 
     private CollisionInfo collisionInfo;
     private RaycastOrigins raycastOrigins;

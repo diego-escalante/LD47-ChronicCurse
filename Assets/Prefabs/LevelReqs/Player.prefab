@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxBreakCharges: 1
-  loopsToChargeBreak: 2
+  loopsToChargeBreak: 1
   run: {fileID: -4223804413438548753, guid: 037036e92c4a35d429bd24994a210b48, type: 3}
   stand: {fileID: 5279712763784329885, guid: 037036e92c4a35d429bd24994a210b48, type: 3}
 --- !u!95 &1700100586747480606

@@ -10,8 +10,8 @@ public class PlatformLooper : MonoBehaviour, ILooper {
     public Sprite loopSprite;
 
     public void OnEnable() {
-        this.SubscribeToLoop();
         rend.sprite = loopSprite;
+        this.SubscribeToLoop();
     }
 
     public void OnDisable() {
