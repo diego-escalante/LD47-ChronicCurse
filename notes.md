@@ -83,6 +83,6 @@ Extra Mechanics:
 * ~~Spikes and dying.~~
 * ~~Turrets.~~
 * Doors and keys.
-* Switches.
+* ~~Switches.~~
 * Elementals.
 * Other powers.
