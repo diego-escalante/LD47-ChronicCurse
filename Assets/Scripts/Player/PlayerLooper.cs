@@ -26,6 +26,7 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     private MusicController musicController;
     private SoundController soundController;
     private CamShake camShake;
+    private PlayerLifeController plc;
 
     public Sprite run;
     public Sprite stand;
@@ -72,10 +73,11 @@ public class PlayerLooper : MonoBehaviour, ILooper {
         musicController = loop.GetComponent<MusicController>();
         soundController = loop.GetComponent<SoundController>();
         camShake = cam.transform.Find("Main Camera").GetComponent<CamShake>();
+        plc = GetComponent<PlayerLifeController>();
     }
 
     public void Update() {
-        if (Input.GetButton("Action") && breakCharges > 0 && !breakBuffer) {
+        if ((plc.canDie || plc.justRevived) && Input.GetButton("Action") && breakCharges > 0 && !breakBuffer) {
             breakBuffer = true;
         }
         if (breakBuffer && loop.GetLoopPercentage() < 0.95f) {
@@ -103,7 +105,7 @@ public class PlayerLooper : MonoBehaviour, ILooper {
         Vector3 delta = (Vector3)position - transform.position;
         cam.Translate(delta);
         soundController.playSnapBackSound();
-        // camShake.TinyShake();
+        plc.Revive();
 
         transform.position = position;
         if (breakCharges < maxBreakCharges) {
