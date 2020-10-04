@@ -25,6 +25,7 @@ public class ExitBehavior : MonoBehaviour  {
         if (coll.Overlaps(player) && !isFading) {
             fader.Fade(Color.clear, Color.black, transitionDuration);
             isFading = true;
+            player.GetComponent<PlayerLooper>().enabled = false;
         }
 
         if (isFading) {
