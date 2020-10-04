@@ -79,10 +79,10 @@ Core Game:
 * ~~Tutorial level (Player enters temple, no looping, just get used to standard platforming. _Maybe_ short dialogue to explain story.)~~
 
 Extra Mechanics:
-* Moving platforms.
+* ~~Moving platforms.~~
+* ~~Spikes and dying.~~
+* ~~Turrets.~~
 * Doors and keys.
 * Switches.
 * Elementals.
-* Turrets.
-* Spikes and dying.
 * Other powers.
