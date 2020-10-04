@@ -8,7 +8,7 @@ public class CollisionController : MonoBehaviour {
     public LayerMask collisionMask;
 
     private BoxCollider2D boxCollider;
-    private const float SKIN = 0.015f;
+    private const float SKIN = 0.025f;
     private const int RAYCAST_COUNT = 5;
 
     private CollisionInfo collisionInfo;

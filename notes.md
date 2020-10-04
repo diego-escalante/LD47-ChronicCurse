@@ -76,13 +76,13 @@ Core Game:
 * ~~Loop breaking power and regeneration.~~
 * ~~UI: Show loop time, loop breaking power charge, controls.~~
 * ~~Basic levels - starting points, goals, transition between levels.~~
-* Tutorial level (Player enters temple, no looping, just get used to standard platforming. _Maybe_ short dialogue to explain story.)
+* ~~Tutorial level (Player enters temple, no looping, just get used to standard platforming. _Maybe_ short dialogue to explain story.)~~
 
 Extra Mechanics:
-* Spikes and dying.
 * Moving platforms.
 * Doors and keys.
-* Turrets.
 * Switches.
 * Elementals.
+* Turrets.
+* Spikes and dying.
 * Other powers.

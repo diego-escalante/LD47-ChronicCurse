@@ -10,7 +10,11 @@ public class PlatformController : MonoBehaviour {
     public List<Vector2> waypoints;
     public bool isCyclical = false;
 
-    public Vector2 move;
+    public float speed;
+    private int fromWaypointIndex;
+    float percentBetweenWaypoints;
+    private bool isReversed = false;
+
     CollisionController collisionController;
 
     private const float SKIN = 0.015f;
@@ -30,7 +34,7 @@ public class PlatformController : MonoBehaviour {
         // Add the platform's position as the first waypoint and convert the local waypoints to global.
         globalWaypoints.Add(transform.position);
         foreach (Vector2 waypoint in waypoints) {
-            globalWaypoints.Add(waypoint - (Vector2)transform.position);
+            globalWaypoints.Add(waypoint + (Vector2)transform.position);
         }
 
         collisionController = GetComponent<CollisionController>();
@@ -46,7 +50,7 @@ public class PlatformController : MonoBehaviour {
 
     void Update() {
         Vector2 moveVector;
-        Vector2 velocity = move * Time.deltaTime;
+        Vector2 velocity = CalculatePlatformMovement();
 
         // Normal collision checking based on platform's movement, If we even care about collisions for movement.
         if (solidMask.value != 0) {
@@ -98,4 +102,41 @@ public class PlatformController : MonoBehaviour {
 
         transform.Translate(moveVector);
     }
+
+    private Vector2 CalculatePlatformMovement() {
+        int toWaypointIndex = (fromWaypointIndex + 1) % globalWaypoints.Count;
+        float distanceBetweenWaypoints = Vector2.Distance(globalWaypoints[fromWaypointIndex], globalWaypoints[toWaypointIndex]);
+        percentBetweenWaypoints += Time.deltaTime * speed/distanceBetweenWaypoints;
+
+        Vector2 newPos = Vector2.Lerp(globalWaypoints[fromWaypointIndex], globalWaypoints[toWaypointIndex], percentBetweenWaypoints);
+
+        if (percentBetweenWaypoints >= 1) {
+            percentBetweenWaypoints = 0;
+            fromWaypointIndex = toWaypointIndex;
+            if (fromWaypointIndex >= globalWaypoints.Count - 1) {
+                if(!isCyclical) {
+                    fromWaypointIndex = 0;
+                    globalWaypoints.Reverse();
+                    isReversed = !isReversed;
+                }
+            }
+        }
+
+        return newPos - (Vector2)transform.position;
+    }
+
+    public int GetCurrentWaypointIndex() {
+        return fromWaypointIndex;
+    }
+
+    public void SetCurrentWaypoint(int index) {
+        fromWaypointIndex = index;
+        transform.position = globalWaypoints[fromWaypointIndex];
+        percentBetweenWaypoints = 0;
+        if(isReversed) {
+            globalWaypoints.Reverse();
+            isReversed = false;
+        }
+    }
+
 }
