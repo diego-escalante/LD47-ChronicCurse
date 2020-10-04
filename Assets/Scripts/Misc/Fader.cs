@@ -8,7 +8,7 @@ public class Fader : MonoBehaviour {
     private Coroutine co;
 
     private void Awake() {
-        image = GameObject.FindWithTag("UI").transform.Find("Fader").GetComponent<Image>();
+        image = GetComponent<Image>();
     }
 
     public void Fade(Color startColor, Color endColor, float duration) {

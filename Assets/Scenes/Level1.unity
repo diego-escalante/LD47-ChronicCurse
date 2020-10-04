@@ -1225,110 +1225,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29be9458405aaa34f97ebbd50e14c73a, type: 3}
---- !u!1001 &105780612
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 50.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 12.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[0].text
-      value: You see a drop to the main chamber. Only one way down, it seems.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[0].emphasis
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[0].color.r
-      value: 0.98039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[0].color.g
-      value: 0.99607843
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[0].color.b
-      value: 0.90588236
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097887, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_Name
-      value: DialogueArea (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c00bb46789fed0b4e9e69f0fdba23a3a, type: 3}
 --- !u!1001 &110595390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8631,7 +8527,7 @@ PrefabInstance:
     - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -8656,7 +8552,7 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -8676,13 +8572,12 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[0].emphasis
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[0].text
-      value: You are frozen mid-plunge. A voice, seemingly from nowhere, booms through
-        the ruins.
+      value: You are frozen in time. A disembodied voice booms through the ruins.
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -8692,7 +8587,7 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[1].fontSize
-      value: 50
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -8727,7 +8622,7 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[2].fontSize
-      value: 50
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -8752,7 +8647,7 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[2].text
-      value: PUNY MORTAL. SURRENDER TO MY CURSE OF TIME.
+      value: 'I CURSE YOU, PUNY MORTAL. '
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -8762,7 +8657,7 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[3].fontSize
-      value: 50
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -8787,27 +8682,27 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[3].text
-      value: WITHIN THE TEMPLE, YOU SHALL BE TRAPPED FOR ALL ETERNITY.
+      value: YOU SHALL BE TRAPPED FOREVER IN THIS TEMPLE.
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[4].fontSize
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[4].color.r
-      value: 0.5568628
+      value: 0.9803922
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[4].color.g
-      value: 0.1254902
+      value: 0.9960785
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[4].color.b
-      value: 0.654902
+      value: 0.9058824
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -8817,7 +8712,70 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[4].text
-      value: ACCEPT YOUR FATE.
+      value: Oh no! You have been cursed by Time incarnate. You will periodically
+        jump back to where you were in the immediate past.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
+        type: 3}
+      propertyPath: dialogue.subDialogues.Array.data[5].fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
+        type: 3}
+      propertyPath: dialogue.subDialogues.Array.data[5].color.r
+      value: 0.9803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
+        type: 3}
+      propertyPath: dialogue.subDialogues.Array.data[5].color.g
+      value: 0.9960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
+        type: 3}
+      propertyPath: dialogue.subDialogues.Array.data[5].color.b
+      value: 0.9058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
+        type: 3}
+      propertyPath: dialogue.subDialogues.Array.data[5].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
+        type: 3}
+      propertyPath: dialogue.subDialogues.Array.data[5].text
+      value: However, you can focus your willpower to break out an upcoming cycle.
+        Use this ability to navigate out of the ruins.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
+        type: 3}
+      propertyPath: dialogue.subDialogues.Array.data[6].fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
+        type: 3}
+      propertyPath: dialogue.subDialogues.Array.data[6].color.r
+      value: 0.9803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
+        type: 3}
+      propertyPath: dialogue.subDialogues.Array.data[6].color.g
+      value: 0.9960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
+        type: 3}
+      propertyPath: dialogue.subDialogues.Array.data[6].color.b
+      value: 0.9058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
+        type: 3}
+      propertyPath: dialogue.subDialogues.Array.data[6].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
+        type: 3}
+      propertyPath: dialogue.subDialogues.Array.data[6].text
+      value: Keep in mind that you'll need to wait for your power to regenerate after
+        using it.
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097887, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -11976,7 +11934,7 @@ PrefabInstance:
     - target: {fileID: 8162321679583068105, guid: e004f4bb12929ab47bc1275e4bd2beb6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8162321679583068105, guid: e004f4bb12929ab47bc1275e4bd2beb6,
         type: 3}
@@ -13091,7 +13049,7 @@ PrefabInstance:
     - target: {fileID: 6073549955507531238, guid: be3b018f76ccdf1448b16a24c253bae3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6073549955507531238, guid: be3b018f76ccdf1448b16a24c253bae3,
         type: 3}
@@ -14210,177 +14168,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29be9458405aaa34f97ebbd50e14c73a, type: 3}
---- !u!1001 &1259812178
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 72.74288
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.5733275
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[0].emphasis
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[0].color.r
-      value: 0.98039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[0].color.g
-      value: 0.99607843
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[0].color.b
-      value: 0.90588236
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[0].text
-      value: What is this, you wonder. You keep returning to place you were just
-        a little while ago.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[1].emphasis
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[1].fontSize
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[1].color.r
-      value: 0.98039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[1].color.g
-      value: 0.99607843
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[1].color.b
-      value: 0.90588236
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[1].color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[1].text
-      value: You need to get out of here. If you focus all your power to resist the
-        curse, might be able to break out of the cycle temporarily.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[2].emphasis
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[2].fontSize
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[2].color.r
-      value: 0.98039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[2].color.g
-      value: 0.99607843
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[2].color.b
-      value: 0.90588236
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[2].color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: dialogue.subDialogues.Array.data[2].text
-      value: You will need to rest a bit afterwards before doing that again.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698379625593097887, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
-        type: 3}
-      propertyPath: m_Name
-      value: DialogueArea (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c00bb46789fed0b4e9e69f0fdba23a3a, type: 3}
 --- !u!1001 &1261118967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17004,7 +16791,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1556998602
 PrefabInstance:
@@ -17997,7 +17784,7 @@ PrefabInstance:
     - target: {fileID: 8549744924291975878, guid: 3d89c4c9fd580ca478be822ddeb6264a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8549744924291975878, guid: 3d89c4c9fd580ca478be822ddeb6264a,
         type: 3}
@@ -18022,7 +17809,7 @@ PrefabInstance:
     - target: {fileID: 8549744924291975878, guid: 3d89c4c9fd580ca478be822ddeb6264a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8549744924291975878, guid: 3d89c4c9fd580ca478be822ddeb6264a,
         type: 3}
@@ -18874,6 +18661,125 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29be9458405aaa34f97ebbd50e14c73a, type: 3}
+--- !u!1001 &1767653739
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990882, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089912000704990894, guid: a7a6afd3d28f23d4494da90c617c18a5,
+        type: 3}
+      propertyPath: m_Name
+      value: World UI
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a7a6afd3d28f23d4494da90c617c18a5, type: 3}
 --- !u!1001 &1771700704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20989,7 +20895,7 @@ PrefabInstance:
     - target: {fileID: 5249163288690993396, guid: 99d4e5ea55d9b184fae4af36b584a6c8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5249163288690993396, guid: 99d4e5ea55d9b184fae4af36b584a6c8,
         type: 3}
@@ -21909,7 +21815,7 @@ Transform:
   m_LocalScale: {x: 16.1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2076196009
 PrefabInstance:
@@ -22348,7 +22254,7 @@ RectTransform:
   m_Children:
   - {fileID: 194883779}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -22469,7 +22375,7 @@ PrefabInstance:
     - target: {fileID: 704124813581736330, guid: 17e45af5f89372340991d66874aee06f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 704124813581736330, guid: 17e45af5f89372340991d66874aee06f,
         type: 3}
@@ -22538,7 +22444,7 @@ PrefabInstance:
     - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097856, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -22558,22 +22464,23 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[0].emphasis
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[0].text
-      value: You make your way through the entrance of the temple ruins.
+      value: You make your way through the entrance of the temple ruins. These ruins
+        feel different somehow, but this isn't your first rodeo.
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[1].emphasis
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
@@ -22603,7 +22510,7 @@ PrefabInstance:
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}
       propertyPath: dialogue.subDialogues.Array.data[1].text
-      value: These ruins feel different somehow, but this isn't your first rodeo.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8698379625593097886, guid: c00bb46789fed0b4e9e69f0fdba23a3a,
         type: 3}

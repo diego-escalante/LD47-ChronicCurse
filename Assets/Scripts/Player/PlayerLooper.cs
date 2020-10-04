@@ -11,7 +11,7 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     
     private bool isLooping = true;
     private int loopsToChargeBreakLeft;
-    private Vector2 position;
+    private Vector3 position;
     private int breakCharges = 0;
 
     private SpriteRenderer loopGhost;
@@ -30,12 +30,15 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     public Sprite run;
     public Sprite stand;
 
+    private bool breakBuffer = false;
+
     private void OnEnable() {
         this.SubscribeToLoop();
         loopsToChargeBreakLeft = loopsToChargeBreak;
         loopSlider.gameObject.SetActive(true);
         chargeSlider.gameObject.SetActive(true);
         shiftButton.gameObject.SetActive(true);
+        loop.playerLooper = this;
     }
 
     private void OnDisable() {
@@ -49,6 +52,7 @@ public class PlayerLooper : MonoBehaviour, ILooper {
         if (shiftButton != null) {
             shiftButton.gameObject.SetActive(false);
         }
+        loop.playerLooper = null;
     }
 
     public void Awake() {
@@ -71,7 +75,12 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     }
 
     public void Update() {
-        if (Input.GetButton("Action") && breakCharges > 0) {
+        if (Input.GetButton("Action") && breakCharges > 0 && !breakBuffer) {
+            breakBuffer = true;
+        }
+        if (breakBuffer && loop.GetLoopPercentage() < 0.95f) {
+            breakCharges--;
+            breakBuffer = false;
             BreakLoop();
         }
         UpdateBreakMeter();
@@ -94,7 +103,7 @@ public class PlayerLooper : MonoBehaviour, ILooper {
         Vector3 delta = (Vector3)position - transform.position;
         cam.Translate(delta);
         soundController.playSnapBackSound();
-        camShake.TinyShake();
+        // camShake.TinyShake();
 
         transform.position = position;
         if (breakCharges < maxBreakCharges) {
@@ -106,7 +115,6 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     }
 
     private void BreakLoop() {
-        breakCharges--;
         loopsToChargeBreakLeft = loopsToChargeBreak;
         isLooping = false;
         camShake.TinyShake();
