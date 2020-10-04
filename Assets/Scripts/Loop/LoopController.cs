@@ -8,15 +8,38 @@ public class LoopController : MonoBehaviour {
     public float loopDuration = 5f;
     private float loopTimeLeft;
     private Slider loopSlider;
+    private Slider chargeSlider;
+    private Transform shiftButton;
 
     private List<ILooper> subscribers = new List<ILooper>();
 
     private void Awake() {
-        loopSlider = GameObject.FindGameObjectWithTag("UI").transform.Find("LoopSlider").GetComponent<Slider>();
+        Transform UITrans = GameObject.FindGameObjectWithTag("UI").transform;
+        loopSlider = UITrans.Find("LoopSlider").GetComponent<Slider>();
+        chargeSlider = UITrans.Find("BreakMeter").GetComponent<Slider>();
+        shiftButton = UITrans.Find("ButtonShift");
+        loopSlider.gameObject.SetActive(this.isActiveAndEnabled);
+        chargeSlider.gameObject.SetActive(this.isActiveAndEnabled);
+        shiftButton.gameObject.SetActive(this.isActiveAndEnabled);
     }
 
     private void OnEnable() {
         loopTimeLeft = loopDuration;
+        loopSlider.gameObject.SetActive(true);
+        chargeSlider.gameObject.SetActive(true);
+        shiftButton.gameObject.SetActive(true);
+    }
+
+    private void OnDisable() {
+        if (loopSlider != null) {
+            loopSlider.gameObject.SetActive(false);
+        }
+        if (chargeSlider != null) {
+            chargeSlider.gameObject.SetActive(false);
+        }
+        if (shiftButton != null) {
+            shiftButton.gameObject.SetActive(false);
+        }
     }
 
     private void Update() {
@@ -50,5 +73,4 @@ public class LoopController : MonoBehaviour {
     public float GetLoopPercentage() {
         return Mathf.Clamp((loopDuration-loopTimeLeft)/loopDuration, 0, 1);
     }
-
 }

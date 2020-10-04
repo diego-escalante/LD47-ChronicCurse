@@ -68,7 +68,7 @@ public class DialogueManager : MonoBehaviour {
             } else {
                 uiText.text = currentText;
             }
-            yield return new WaitForSecondsRealtime(0.03f);
+            yield return new WaitForSecondsRealtime(0.01f);
         }
     }
 }

@@ -19,6 +19,10 @@ public class PlayerLooper : MonoBehaviour, ILooper {
     private Slider breakMeter;
     private LoopController loop;
     private CameraBehavior cam;
+    private Animator animator;
+
+    public Sprite run;
+    public Sprite stand;
 
     private void OnEnable() {
         this.SubscribeToLoop();
@@ -31,6 +35,8 @@ public class PlayerLooper : MonoBehaviour, ILooper {
 
     public void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+
         loop = GameObject.FindGameObjectWithTag("GameController").GetComponent<LoopController>();
         breakMeter = GameObject.FindGameObjectWithTag("UI").transform.Find("BreakMeter").GetComponent<Slider>();
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraBehavior>();
@@ -49,8 +55,8 @@ public class PlayerLooper : MonoBehaviour, ILooper {
 
     public void SetState() {
         position = transform.position;
-        createLoopGhost();
         isLooping = true;
+        createLoopGhost();
     }
 
     public void Loop() {
@@ -82,7 +88,20 @@ public class PlayerLooper : MonoBehaviour, ILooper {
             loopGhost.color = c;
         }
 
-        loopGhost.sprite = spriteRenderer.sprite;
+        // This totally sucks.
+        Sprite s;
+        switch (animator.GetCurrentAnimatorStateInfo(0).ToString()) {
+            case "PlayerIdleRight":
+            s = stand;
+            break;
+            case "PlayerRunningRight":
+            case "PlayerJumpingRight":
+            default:
+            s = run;
+            break;
+        }
+        loopGhost.sprite = s;
+        loopGhost.flipX = spriteRenderer.flipX;
         loopGhost.transform.position = transform.position;
     }
 

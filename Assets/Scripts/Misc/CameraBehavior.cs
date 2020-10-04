@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraBehavior : MonoBehaviour {
     
     public float speed = 5;
-    public Vector2 minScreenPosition = new Vector2(0.4f, 0.2f);
+    public Vector2 minScreenPosition = new Vector2(0.4f, 0.4f);
 
     private Transform target;
     private float z;
@@ -14,7 +14,7 @@ public class CameraBehavior : MonoBehaviour {
     private void Start() {
         z = transform.position.z;
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        transform.position = new Vector3(target.position.x, target.position.y + 10, z);
+        transform.position = new Vector3(target.position.x, target.position.y + 2f, z);
         cam = GetComponent<Camera>();
     }
 

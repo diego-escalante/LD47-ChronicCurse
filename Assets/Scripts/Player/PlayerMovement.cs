@@ -322,4 +322,12 @@ public class PlayerMovement : MonoBehaviour {
             return wallDirection;
         }
     }
+
+    public Vector2 GetVelocity() {
+        return velocity;
+    }
+
+    public bool IsGrounded() {
+        return collisionInfo.collisionBelow;
+    }
 }
