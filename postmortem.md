@@ -1,7 +1,5 @@
 # Chronic Curse Postmortem
 
-## Overview 
-
 ## What Went Down
 
 ### Friday
