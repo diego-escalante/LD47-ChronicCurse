@@ -1,27 +1,42 @@
-# Ludum Dare 47: Chronic Curse
+# Chronic Curse
 
-This repo houses my game submission for Ludum Dare 47. The Ludum Dare Compo is an event where you create a game from scratch in 48 hours based on a theme. The theme for this Ludum Dare was **Stuck in a Loop**.
+<p align="center">
+  <picture>
+    <source srcset="../assets/gameplay.gif?raw=true">
+    <img alt="Shows a gif with a snippet of gameplay." src="../assets/gameplay.gif?raw=true">
+  </picture>
+</p>
 
-## [Play Chronic Curse here!](http://diego-escalante.github.io/LD47/)
+## [Play the game here!](https://diego-escalante.itch.io/chronic-curse)
+This game was made in 48 hours for the Ludum Dare 47 jam. The theme of the jam was "Stuck in a Loop." It was made with Unity. 
 
-## Other links
-* [Game submission at ldjam.com](https://ldjam.com/events/ludum-dare/47/chronic-curse)
-* [Watch the timelapse](https://drive.google.com/file/d/121PILh103y9NFOmWsuctETuMl1s57TR5/view?usp=sharing)
-* [Read the postmortem](https://github.com/diego-escalante/LD47-ChronicCurse/blob/master/postmortem.md)
+## Links
+* [Chronic Curse on itch.io](https://diego-escalante.itch.io/chronic-curse): Play the game directly on your browser here.
+* [Jam Submission Page](https://ldjam.com/events/ludum-dare/47/chronic-curse): Feedback on the game by other participants can be found here.
 
-## Ludum Dare Results
+## Tools Used
+* [Unity](https://unity.com/) as the game engine.
+* [Aesprite](https://www.aseprite.org/) for graphics.
+* [Audacity](https://www.audacityteam.org/) and [Bfxr](http://www.bfxr.net/) for sound effects.
 
-* **Rank**: Chronic Curse's rank in each of the categories out of the **800 compo submissions** for LD47.
-* **Precentile**: Because the total number of submissions changes between Ludum Dare events, I like to represent my game's results as percentiles to be able to compare my results across events.
-* **Delta**: Represents the increase or decrease in percentile compared to the previous Ludum Dare event that I participated in. In this case, it was [Friendly Fire](https://ldjam.com/events/ludum-dare/46/friendly-fire).
+## Setting Up the Project Locally
+1. Make sure you have Unity version 2019.4.11f1 installed, as that is the version of the engine that was used for this game. You can get it from the [Unity Hub](https://unity.com/download).
+2. Clone this repo in your desired directory: `git clone https://github.com/diego-escalante/LD47-ChronicCurse.git`
+3. Start up the Unity Hub. Open the project and ensure that the editor version 2019.4.11f1 is selected for the project.
+4. One the engine opens up the project, you can run the game by opening up the main scene and pressing the Play button in the top center.
 
-| Category   | Rank  | Percentile | Delta  |
-|------------|:-----:|:----------:|:------:|
-| Overall    | 124th | 84.50      | +13.35 |
-| Fun        | 172nd | 78.50      | +17.55 |
-| Innovation | 221st | 72.38      | +34.12 |
-| Theme      | 157th | 80.38      | +36.12 |
-| Graphics   | 168th | 79.00      | -8.49  |
-| Audio      | 67th  | 91.63      | +8.11  |
-| Humor      | 274th | 65.75      | +12.75 |
-| Mood       | 215th | 73.13      | -15.57 |
+## Rankings
+The game received the following rankings in the game jam:
+| Category   | Rank (out of 800 entries) |
+|-----------:|:--------------------------|
+| Overall    | 124                       |
+| Fun        | 172                       |
+| Innovation | 221                       |
+| Theme      | 157                       |
+| Graphics   | 168                       |
+| Audio      | 67                        |
+| Humor      | 274                       |
+| Mood       | 215                       |
+
+## Other Notes
+* The project has an [MIT license](LICENSE). Feel free to inspect the game, tinker with it, and learn from it. Let me know if you do something cool with it! Cheers!
