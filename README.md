@@ -8,7 +8,7 @@
 </p>
 
 ## [Play the game here!](https://diego-escalante.itch.io/chronic-curse)
-This game was made in 48 hours for the Ludum Dare 47 jam. The theme of the jam was "Stuck in a Loop." It was made with Unity. 
+This game was made in 48 hours for the Ludum Dare 47 jam in October 2020. The theme of the jam was "Stuck in a Loop." It was made with Unity. 
 
 ## Links
 * [Chronic Curse on itch.io](https://diego-escalante.itch.io/chronic-curse): Play the game directly on your browser here.
